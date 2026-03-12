@@ -29,3 +29,9 @@ npm-debug.log*
 
 # Testing
 coverage/
+
+# Local tools / downloaded binaries
+bin/
+gh_cli/
+node-v20.19.0-win-x64/
+*.zip

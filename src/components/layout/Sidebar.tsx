@@ -9,6 +9,7 @@ import {
   ChevronLeft,
 } from 'lucide-react'
 import { useSecurityStore, useUIStore } from '@/store'
+import { SecureFlowLogo } from '@/components/ui/secure-flow-logo'
 
 const navItems = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
@@ -30,15 +31,13 @@ export default function Sidebar() {
       )}
     >
       {/* Logo */}
-      <div className="flex items-center gap-3 px-4 py-4 border-b border-border min-h-[57px]">
-        <div className="w-6 h-6 rounded bg-amber-500/20 border border-amber-500/40 flex items-center justify-center flex-shrink-0">
-          <span className="text-amber-400 font-mono font-bold text-xs">SF</span>
-        </div>
-        {!sidebarCollapsed && (
-          <span className="font-mono font-bold text-sm text-slate-200 tracking-wide whitespace-nowrap">
-            SecureFlow
-          </span>
+      <div
+        className={clsx(
+          'flex items-center border-b border-border min-h-[57px]',
+          sidebarCollapsed ? 'justify-center px-0 py-4' : 'gap-3 px-4 py-4'
         )}
+      >
+        <SecureFlowLogo compact={sidebarCollapsed} className="overflow-hidden" />
       </div>
 
       {/* Nav */}

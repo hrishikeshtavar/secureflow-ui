@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { AlertTriangle, CheckCircle, XCircle, ChevronRight, Clock } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
 import { riskConfig, formatScore } from '@/utils/riskScore'
 import { formatRelative, formatCurrency } from '@/utils/formatters'
 import type { InvoiceScan } from '@/types/invoice'
